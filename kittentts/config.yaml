@@ -1,0 +1,29 @@
+---
+name: "KittenTTS"
+description: "Local TTS using KittenTTS"
+version: "0.6.0"
+slug: kittentts
+url: "https://github.com/tcarney/app-kittentts"
+arch:
+  - aarch64
+  - amd64
+init: false
+discovery:
+  - wyoming
+startup: application
+boot: auto
+ports:
+  "10200/tcp": null
+map:
+  - share:rw
+backup_exclude:
+  - "*.onnx"
+  - "*.npz"
+options:
+  model: "KittenML/kitten-tts-mini-0.8"
+  voice: "Jasper"
+  debug: false
+schema:
+  model: str
+  voice: list(Bella|Jasper|Luna|Bruno|Rosie|Hugo|Kiki|Leo)
+  debug: bool

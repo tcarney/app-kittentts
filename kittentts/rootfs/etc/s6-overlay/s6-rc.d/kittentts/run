@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bashio
+
+MODEL=$(bashio::config 'model')
+VOICE=$(bashio::config 'voice')
+DEBUG=$(bashio::config 'debug')
+
+FLAGS="--model ${MODEL} --voice ${VOICE}"
+if [ "${DEBUG}" = "true" ]; then
+  FLAGS="${FLAGS} --debug"
+fi
+
+exec wyoming-kittentts ${FLAGS}
