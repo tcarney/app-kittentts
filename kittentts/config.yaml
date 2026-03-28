@@ -1,7 +1,7 @@
 ---
 name: "KittenTTS"
 description: "Local TTS using KittenTTS"
-version: "0.6.0"
+version: "0.7.0"
 slug: kittentts
 url: "https://github.com/tcarney/app-kittentts"
 arch:
