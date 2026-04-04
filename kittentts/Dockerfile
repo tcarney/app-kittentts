@@ -20,7 +20,7 @@ RUN \
         wheel \
     && pip3 install --no-cache-dir \
         "kittentts @ git+https://github.com/KittenML/KittenTTS.git@0.8.1" \
-        "wyoming-kittentts @ git+https://github.com/tcarney/wyoming-kittentts.git@v0.2.0" \
+        "wyoming-kittentts @ git+https://github.com/tcarney/wyoming-kittentts.git@v0.3.0" \
     \
     && rm -rf /var/lib/apt/lists/*
 
